@@ -104,7 +104,8 @@ export default function Quotes() {
  * (4) API Object response: can use useState(null) or useState({}) as default initial value
  * --> then access properties of that object by:
  * --> first in fetch: .then(data => setStateVar(data))
- * --> inside return render: stateVar.{key}
+ * --> inside return render: stateVar?.{key}
+ * --> the ? means null is allowed (since null is default initial value)
  * ex. 
  * ```jsx
  * 
@@ -113,8 +114,8 @@ export default function Quotes() {
  *  .then(data => setPredictedAge(data))
  * return (
  * <>
- * <h3>{predictedAge.name}</h3>
- * <p>{predictedAge.age}</p>
+ * <h3>{predictedAge?.name}</h3>
+ * <p>{predictedAge?.age}</p>
  * </>
  * )
  * 
