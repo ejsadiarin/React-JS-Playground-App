@@ -10,10 +10,9 @@ import { useEffect, useState } from "react"
 
 // Fetch API version
 export default function ExerciseAPI() {
-  const [choice, setChoice] = useState("");
   const [excuseData, setExcuseData] = useState([]);
 
-  function fetchData() {
+  function fetchData(choice) {
     fetch(`https://excuser-three.vercel.app/v1/excuse/${choice}`)
       .then(res => res.json())
       .then(data => {
@@ -25,57 +24,6 @@ export default function ExerciseAPI() {
   // useEffect(() => {
   //   fetchData();
   // }, [choice]);
-  
-  function handleFamily() {
-    setChoice(() => "family");
-    fetchData();
-  }
-  
-  function handleOffice() {
-    setChoice(() => "office");
-    fetchData();
-  }
-
-  function handleChildren() {
-    setChoice(() => "children");
-    fetchData();
-  }
-
-
-  function handleCollege() {
-    setChoice(() => "college");
-    fetchData();
-  }
-
-
-  function handleParty() {
-    setChoice(() => "party");
-    fetchData();
-  }
-
-
-  function handleFunny() {
-    setChoice(() => "funny");
-    fetchData();
-  }
-
-
-  function handleUnbelievable() {
-    setChoice(() => "unbelievable");
-    fetchData();
-  }
-
-
-  function handleDevelopers() {
-    setChoice(() => "developers");
-    fetchData();
-  }
-
-
-  function handleGaming() {
-    setChoice(() => "gaming");
-    fetchData();
-  }
 
   return (
     <>
@@ -86,15 +34,15 @@ export default function ExerciseAPI() {
           <p>Category: {data.category}</p>
         </div>
       ))}
-      <button onClick={handleFamily}>Family</button>
-      <button onClick={handleOffice}>Office</button>
-      <button onClick={handleChildren}>Children</button>
-      <button onClick={handleCollege}>College</button>
-      <button onClick={handleParty}>Party</button>
-      <button onClick={handleFunny}>Funny</button>
-      <button onClick={handleUnbelievable}>Unbelievable</button>
-      <button onClick={handleDevelopers}>Developers</button>
-      <button onClick={handleGaming}>Gaming</button>
+      <button onClick={() => fetchData("family")}>Family</button>
+      <button onClick={() => fetchData("office")}>Office</button>
+      <button onClick={() => fetchData("children")}>Children</button>
+      <button onClick={() => fetchData("college")}>College</button>
+      <button onClick={() => fetchData("party")}>Party</button>
+      <button onClick={() => fetchData("funny")}>Funny</button>
+      <button onClick={() => fetchData("unbelievable")}>Unbelievable</button>
+      <button onClick={() => fetchData("developers")}>Developers</button>
+      <button onClick={() => fetchData("gaming")}>Gaming</button>
       {/* can also do one button that changes dynamically based on clicked button name */}
     </>
   )
