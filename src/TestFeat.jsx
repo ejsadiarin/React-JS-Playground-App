@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "./App";
 
 function Counter() {
   const [age, setAge] = useState(0);
@@ -17,16 +18,26 @@ function Counter() {
 
 function Input() {
   const [inputValue, setInputValue] = useState("");
+  const [newWord, setNewWord] = useState("");
+  const { setWord } = useContext(AppContext);
 
   function handleInputValue(e) {
     setInputValue(e.target.value);
     console.log(e.target.value);
   }
 
+
   return (
     <div>
       <input type="text" onChange={handleInputValue} />
       {inputValue}
+      <p>useContext input here to change word in Planets component:</p>
+      <input 
+        type="text"
+        placeholder="new word..."
+        onChange={(e) => setNewWord(e.target.value)}  
+      />
+      <button onClick={() => setWord(newWord)}>Change word</button>
     </div>
   )
 }
@@ -70,6 +81,7 @@ export default function TestFeat() {
   
   return (
     <>
+    <hr />
     <Counter />
     <hr />
     <br />
