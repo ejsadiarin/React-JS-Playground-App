@@ -1,13 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Planets from './Planets'
-import Sidebar from './Sidebar'
-import Exercise1 from './Exercise1'
-import TodoList from './TodoList'
-import Quotes from './Quotes'
-import ObjectAPI from './ObjectAPI'
-import { ExerciseAPIFetch, ExerciseAPIAxios } from './ExerciseAPI'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from './layout/MainLayout';
 
 // TODO: make a UI that displays all the mini projects done so far
 // --> can be a Sidebar that has buttons to show Components (Planets, TodoList, etc.)
@@ -15,15 +10,7 @@ import { ExerciseAPIFetch, ExerciseAPIAxios } from './ExerciseAPI'
 function App() {
   return (
     <div className="App">
-     {/* <Planets /> */}
-     <hr />
-     {/* <Sidebar /> */}
-      {/* <Exercise1 /> */}
-      {/* <TodoList /> */}
-      {/* <Quotes /> */}
-      {/* <ObjectAPI /> */}
-      {/* <ExerciseAPIFetch /> */}
-      <ExerciseAPIAxios />
+      <MainLayout />
     </div>
   )
 }
