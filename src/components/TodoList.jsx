@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Task from "./Task";
+import Task from "./state_props/Task";
 
 export default function TodoList() {
   const [todoList, setTodoList] = useState([]);
