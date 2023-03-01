@@ -1,10 +1,10 @@
-import Planets from '../Planets'
-import TestFeat from '../TestFeat'
-import Exercise1 from '../Exercise1'
-import TodoList from '../TodoList'
-import Quotes from '../Quotes'
-import ObjectAPI from '../ObjectAPI'
-import { ExerciseAPIFetch, ExerciseAPIAxios } from '../ExerciseAPI'
+import Planets from '../components/Planets'
+import TestFeat from '../components/TestFeat'
+import Exercise1 from '../components/Exercise1'
+import TodoList from '../components/TodoList'
+import Quotes from '../components/Quotes'
+import ObjectAPI from '../components/ObjectAPI'
+import { ExerciseAPIFetch, ExerciseAPIAxios } from '../components/ExerciseAPI'
 
 export default function MainLayout() {
   return (

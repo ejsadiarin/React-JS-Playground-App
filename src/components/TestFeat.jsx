@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { AppContext } from "./App";
+import { AppContext } from "../App";
 
 function Counter() {
   const [age, setAge] = useState(0);
