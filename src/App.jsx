@@ -13,7 +13,13 @@ export const AppContext = createContext();
 
 function App() {
   const [word, setWord] = useState("React");
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false // React Query refetch 
+      }
+    }
+  });
 
   return (
     <div className="App">

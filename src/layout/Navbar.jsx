@@ -1,4 +1,4 @@
-import CatFactReactQuery from "../components/CatFactReactQuery";
+import CatFactReactQuery from "../components/react_query/CatFactReactQuery";
 
 const Navbar = () => {
   return (
