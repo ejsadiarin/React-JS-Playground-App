@@ -1,5 +1,8 @@
 // use React Query for fetchCatFact
+// API: https://catfact.ninja/fact
 
-const fetchCatFact = () => {
+const CatFactReactQuery = () => {
   
 }
+
+export default CatFactReactQuery

@@ -9,14 +9,15 @@ import { ExerciseAPIFetch, ExerciseAPIAxios } from '../components/ExerciseAPI'
 export default function MainLayout() {
   return (
     <>  
-    <Planets />
+    {/* <Planets />
     <TestFeat />
     <Exercise1 /> 
     <TodoList /> 
     <Quotes /> 
     <ObjectAPI /> 
     <ExerciseAPIFetch /> 
-    <ExerciseAPIAxios />    
+    <ExerciseAPIAxios />     */}
+    
     </>
   )
 }
