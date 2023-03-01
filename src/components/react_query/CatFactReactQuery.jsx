@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query"
 import axios from "axios";
 
 const CatFactReactQuery = () => {
-  const { data, isLoading, isError, refetch } = useQuery(["cat"], () => {
+  const { data, isLoading, isError, refetch } = useQuery(["cat"], async () => {
     return axios.get('https://catfact.ninja/fact').then((res) => res.data)
   });
 
