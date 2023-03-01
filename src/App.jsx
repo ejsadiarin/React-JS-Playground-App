@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from './layout/MainLayout';
 import Navbar from './layout/Navbar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Login } from './components/forms/Login';
 
 // TODO: make a UI that displays all the mini projects done so far
 // --> can be a Sidebar that has buttons to show Components (Planets, TodoList, etc.)
@@ -29,6 +30,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainLayout />} />
               <Route path="/navbar" element={<Navbar />} />
+              <Route path='/login' element={<Login />} />
             </Routes>
           </BrowserRouter> 
         </AppContext.Provider>
